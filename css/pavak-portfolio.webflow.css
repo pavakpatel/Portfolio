@@ -1,5 +1,5 @@
 .body {
-  background-color: rgba(172, 145, 76, 0.63);
+  background-color: #4cac83;
   cursor: auto;
 }
 
@@ -870,8 +870,8 @@
 
 .picture-button-container {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 67%;
+  top: 73%;
   z-index: 60;
   -webkit-transform: translate(-14vh, -27vh);
   -ms-transform: translate(-14vh, -27vh);
