@@ -166,7 +166,7 @@
   left: 50%;
   top: 62%;
   width: 35vh;
-  height: 11vh;
+  height: 15vh;
   padding: 1vh 2vh;
   border-style: solid;
   border-width: 0.3vh;
@@ -1009,6 +1009,50 @@
   align-items: center;
 }
 
+.hover-text-2 {
+  display: none;
+}
+
+.page-link-2 {
+  padding-right: 2vh;
+  padding-left: 2vh;
+  opacity: 0.5;
+  font-family: Quicksand, sans-serif;
+  color: #62a198;
+  font-size: 2.5vh;
+  line-height: 9vh;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: none;
+}
+
+.page-link-2.hoverable.w--current {
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+.contact-conclusion-block-2 {
+  position: relative;
+  z-index: 65;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(246, 240, 226, 0)), color-stop(23%, #f6f0e2), color-stop(39%, #f6f0e2));
+  background-image: linear-gradient(180deg, rgba(246, 240, 226, 0), #f6f0e2 23%, #f6f0e2 39%);
+}
+
 @media screen and (max-width: 991px) {
   .background-cloud {
     left: 50%;
@@ -1149,6 +1193,10 @@
 
   .bad-size-blocker {
     padding-left: 20px;
+  }
+
+  .hover-text-2 {
+    color: #4cac83;
   }
 }
 
