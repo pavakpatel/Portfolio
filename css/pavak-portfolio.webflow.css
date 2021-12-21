@@ -12,7 +12,7 @@
   perspective: 1000px;
 }
 
-.preet-illustration {
+.pavak-illustration {
   position: absolute;
   z-index: auto;
   overflow: visible;
@@ -1068,7 +1068,7 @@
 }
 
 @media screen and (max-width: 479px) {
-  .preet-illustration {
+  .pavak-illustration {
     margin-bottom: 15vh;
   }
 
