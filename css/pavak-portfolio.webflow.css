@@ -172,7 +172,7 @@
   border-width: 0.3vh;
   border-color: #2e2e2e;
   border-radius: 2vh;
-  background-color: #cbb98f;
+  background-color: #4cac83;
   -webkit-transform: translate3d(0vh, 6vh, 36vh);
   transform: translate3d(0vh, 6vh, 36vh);
   font-family: Quicksand, sans-serif;
@@ -362,7 +362,7 @@
   display: -ms-flexbox;
   display: flex;
   width: 35vh;
-  height: 12vh;
+  height: 18vh;
   padding: 1vh 2vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -445,6 +445,7 @@
   z-index: 60;
   width: 100%;
   height: 100%;
+  background-color: transparent;
   -webkit-transform: translate3d(0px, 0px, 0.1px);
   transform: translate3d(0px, 0px, 0.1px);
   -webkit-transform-style: preserve-3d;
@@ -630,10 +631,7 @@
 .conclusion-links {
   position: absolute;
   bottom: 5vh;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
