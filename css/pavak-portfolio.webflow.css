@@ -428,8 +428,19 @@
   cursor: none;
 }
 
+.back-button.hoverable {
+  opacity: 0;
+}
+
 .back-button-image {
+  position: absolute;
+  left: auto;
+  top: 1%;
+  right: 5%;
+  bottom: auto;
+  z-index: 5;
   width: 7.5vh;
+  opacity: 1;
 }
 
 .scroll-animation {
@@ -1760,6 +1771,31 @@
 
 .service-icon {
   margin-right: 16px;
+}
+
+.back-button-opacity {
+  position: fixed;
+  left: auto;
+  top: 3vh;
+  right: 3vh;
+  bottom: auto;
+  z-index: 199;
+  opacity: 0;
+  cursor: none;
+}
+
+.back-button-opacity.hoverable {
+  border-radius: 0px;
+  opacity: 1;
+}
+
+.close-link {
+  position: absolute;
+  left: auto;
+  top: 1%;
+  right: 3%;
+  bottom: auto;
+  width: 100px;
 }
 
 @media screen and (max-width: 991px) {
