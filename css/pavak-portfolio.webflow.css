@@ -1798,6 +1798,11 @@
   width: 100px;
 }
 
+.spacer-section {
+  height: 13vh;
+  background-color: #101010;
+}
+
 @media screen and (max-width: 991px) {
   .background-cloud {
     left: 50%;
