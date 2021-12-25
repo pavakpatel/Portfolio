@@ -433,7 +433,7 @@
 }
 
 .back-button-image {
-  position: absolute;
+  position: static;
   left: auto;
   top: 1%;
   right: 5%;
