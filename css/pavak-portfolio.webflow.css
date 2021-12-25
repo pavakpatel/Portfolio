@@ -1574,8 +1574,10 @@
 
 .subheader.title {
   margin-bottom: 12px;
+  font-family: Varela, sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  line-height: 1.5em;
+  font-weight: 400;
 }
 
 .bottom-line {
