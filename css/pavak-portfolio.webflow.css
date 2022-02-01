@@ -1900,7 +1900,7 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 90vh;
+  height: 900px;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
@@ -1917,17 +1917,22 @@
   outline-width: 3px;
 }
 
+.section-5.long._1 {
+  height: 885px;
+}
+
 .section-5.map {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 580px;
   border: 1px none #000;
   background-color: #fff;
 }
 
 .section-5.map._1 {
-  height: 61.5vh;
+  height: 580px;
 }
 
 .section-5._800 {
@@ -1935,11 +1940,12 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  height: 580px;
   background-color: #fff;
 }
 
 .section-5._800._1 {
-  height: 58vh;
+  height: 560px;
 }
 
 .section-5._600-copy {
@@ -1958,13 +1964,14 @@
 
 .html-embed-2.long {
   width: 600px;
-  height: 91vh;
+  height: 920px;
   border-style: none;
 }
 
 .html-embed-2._800 {
   display: block;
   width: 800px;
+  height: 620px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
@@ -1978,11 +1985,13 @@
 
 .html-embed-2._600 {
   width: 600px;
+  height: 620px;
   border-style: none;
 }
 
 .html-embed-2._400 {
   width: 560px;
+  height: 620px;
   border-style: none;
 }
 
@@ -2003,7 +2012,7 @@
 .html-embed-2._1200 {
   display: block;
   width: 800px;
-  height: 62vh;
+  height: 630px;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
