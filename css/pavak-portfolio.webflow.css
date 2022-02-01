@@ -1938,6 +1938,10 @@
   background-color: #fff;
 }
 
+.section-5._800._1 {
+  height: 58vh;
+}
+
 .section-5._600-copy {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1999,6 +2003,7 @@
 .html-embed-2._1200 {
   display: block;
   width: 800px;
+  height: 62vh;
   -webkit-box-pack: start;
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
