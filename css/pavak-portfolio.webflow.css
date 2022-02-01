@@ -2256,7 +2256,7 @@
   }
 
   .loading-container {
-    display: block;
+    display: none;
   }
 
   .loading-lottie {
@@ -2560,7 +2560,7 @@
   }
 
   .loading-container {
-    display: block;
+    display: none;
     height: 2500vh;
   }
 
