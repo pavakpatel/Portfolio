@@ -1367,6 +1367,7 @@
   grid-template-columns: 1fr 1fr;
   -ms-grid-rows: auto auto;
   grid-template-rows: auto auto;
+  background-color: #0f0f0f;
 }
 
 .hair-02 {
@@ -2310,6 +2311,10 @@
     grid-template-columns: 1fr;
   }
 
+  .face-section-2 {
+    display: none;
+  }
+
   .home-link-gif-div._1 {
     max-width: 13vw;
   }
@@ -2350,6 +2355,10 @@
 
   .hex-links._5 {
     margin-top: -38px;
+  }
+
+  .html-embed-2._400 {
+    height: 580px;
   }
 
   .loading-container {
@@ -2449,6 +2458,8 @@
 
   .about-image {
     height: 460px;
+    -o-object-fit: contain;
+    object-fit: contain;
   }
 
   .contact-form {
@@ -2557,6 +2568,10 @@
 
   .html-embed-2 {
     height: 63vh;
+  }
+
+  .html-embed-2._400 {
+    height: 500px;
   }
 
   .loading-container {
