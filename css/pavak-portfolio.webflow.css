@@ -577,7 +577,10 @@
 .conclusion-links {
   position: absolute;
   bottom: 5vh;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -2094,6 +2097,50 @@
   background-color: #4cac83;
 }
 
+.button-2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+.button-3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: auto;
+  display: block;
+  max-height: 60vh;
+  max-width: 40%;
+  margin-top: 0vh;
+  margin-right: auto;
+  margin-left: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  background-color: transparent;
+  opacity: 1;
+  -webkit-transform: translate(-30vh, -35vh) translate(-50%, -50%);
+  -ms-transform: translate(-30vh, -35vh) translate(-50%, -50%);
+  transform: translate(-30vh, -35vh) translate(-50%, -50%);
+  font-family: Quicksand, sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 600;
+}
+
+.next-links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 @media screen and (min-width: 1440px) {
   .home-link-gif-div._6 {
     margin-top: -230px;
@@ -2262,6 +2309,16 @@
 
   .loading-lottie {
     left: 43.5%;
+  }
+
+  .button-3 {
+    position: static;
+    left: 0px;
+    top: 3%;
+    margin-top: 0vh;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
 }
 
