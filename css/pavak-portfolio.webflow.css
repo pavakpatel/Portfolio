@@ -2349,6 +2349,7 @@
     position: static;
     left: 0px;
     top: 3%;
+    display: none;
     margin-top: 0vh;
     -webkit-transform: none;
     -ms-transform: none;
