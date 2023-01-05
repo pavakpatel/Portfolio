@@ -177,6 +177,7 @@
   position: absolute;
   left: 50%;
   top: 62%;
+  z-index: -1;
   width: 35vh;
   height: 15vh;
   padding: 1vh 2vh;
@@ -2133,7 +2134,7 @@
 .button-3 {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 52%;
   right: auto;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2202,7 +2203,16 @@
 }
 
 .text-block-2 {
+  font-family: Exo, sans-serif;
   text-align: center;
+  text-transform: uppercase;
+}
+
+.external-icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 1px;
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 1440px) {
