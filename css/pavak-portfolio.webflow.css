@@ -2624,6 +2624,10 @@
     top: 45%;
   }
 
+  .content-stream-container {
+    width: 28vh;
+  }
+
   .content-stream-container.content-stream-container-shadow {
     display: none;
   }
@@ -2817,6 +2821,11 @@
   }
 
   .button-3 {
+    position: absolute;
+    left: 0%;
+    top: auto;
+    right: 0%;
+    bottom: 34%;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
