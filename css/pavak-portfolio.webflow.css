@@ -578,6 +578,11 @@
   text-decoration: none;
 }
 
+.text-block {
+  color: #58c5b6;
+  font-size: 3vh;
+}
+
 .div-block {
   width: 5vh;
   height: 5vh;
@@ -585,7 +590,10 @@
 
 .conclusion-links {
   position: absolute;
-  bottom: 5vh;
+  left: 0%;
+  top: 2%;
+  right: 0%;
+  bottom: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
