@@ -9905,6 +9905,7 @@ var tram = __webpack_require__(124) && $.tram;
  * _.keys
  * _.has
  * _.now
+ * _.template (webflow: upgraded to 1.13.6)
  *
  * http://underscorejs.org
  * (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
@@ -10190,15 +10191,21 @@ module.exports = function () {
     "\u2028": 'u2028',
     "\u2029": 'u2029'
   };
-  var escaper = /\\|'|\r|\n|\u2028|\u2029/g;
+  var escapeRegExp = /\\|'|\r|\n|\u2028|\u2029/g;
 
   var escapeChar = function escapeChar(match) {
     return '\\' + escapes[match];
-  }; // JavaScript micro-templating, similar to John Resig's implementation.
+  }; // In order to prevent third-party code injection through
+  // `_.templateSettings.variable`, we test it against the following regular
+  // expression. It is intentionally a bit more liberal than just matching valid
+  // identifiers, but still prevents possible loopholes through defaults or
+  // destructuring assignment.
+
+
+  var bareIdentifier = /^\s*(\w|\$)+\s*$/; // JavaScript micro-templating, similar to John Resig's implementation.
   // Underscore templating handles arbitrary delimiters, preserves whitespace,
   // and correctly escapes quotes within interpolated code.
   // NB: `oldSettings` only exists for backwards compatibility.
-
 
   _.template = function (text, settings, oldSettings) {
     if (!settings && oldSettings) settings = oldSettings;
@@ -10209,7 +10216,7 @@ module.exports = function () {
     var index = 0;
     var source = "__p+='";
     text.replace(matcher, function (match, escape, interpolate, evaluate, offset) {
-      source += text.slice(index, offset).replace(escaper, escapeChar);
+      source += text.slice(index, offset).replace(escapeRegExp, escapeChar);
       index = offset + match.length;
 
       if (escape) {
@@ -10218,19 +10225,29 @@ module.exports = function () {
         source += "'+\n((__t=(" + interpolate + "))==null?'':__t)+\n'";
       } else if (evaluate) {
         source += "';\n" + evaluate + "\n__p+='";
-      } // Adobe VMs need the match returned to produce the correct offest.
+      } // Adobe VMs need the match returned to produce the correct offset.
 
 
       return match;
     });
-    source += "';\n"; // If a variable is not specified, place data values in local scope.
+    source += "';\n";
+    var argument = settings.variable;
 
-    if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
+    if (argument) {
+      // Insure against third-party code injection. (CVE-2021-23358)
+      if (!bareIdentifier.test(argument)) throw new Error('variable is not a bare identifier: ' + argument);
+    } else {
+      // If a variable is not specified, place data values in local scope.
+      source = 'with(obj||{}){\n' + source + '}\n';
+      argument = 'obj';
+    }
+
     source = "var __t,__p='',__j=Array.prototype.join," + "print=function(){__p+=__j.call(arguments,'');};\n" + source + 'return __p;\n';
+    var render;
 
     try {
       // eslint-disable-next-line no-new-func
-      var render = new Function(settings.variable || 'obj', '_', source);
+      render = new Function(settings.variable || 'obj', '_', source);
     } catch (e) {
       e.source = source;
       throw e;
@@ -10241,7 +10258,6 @@ module.exports = function () {
     }; // Provide the compiled source as a convenience for precompilation.
 
 
-    var argument = settings.variable || 'obj';
     template.source = 'function(' + argument + '){\n' + source + '}';
     return template;
   }; // Export underscore
